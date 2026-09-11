@@ -1,0 +1,60 @@
+{
+  "states": [
+    "dead",
+    "q0",
+    "q1",
+    "q2"
+  ],
+  "alphabet": [
+    "-",
+    "W"
+  ],
+  "start": "q0",
+  "accepting": [
+    "q0",
+    "q1",
+    "q2"
+  ],
+  "transitions": [
+    {
+      "from": "q0",
+      "on": "W",
+      "to": "q1"
+    },
+    {
+      "from": "q0",
+      "on": "-",
+      "to": "q0"
+    },
+    {
+      "from": "q1",
+      "on": "W",
+      "to": "q2"
+    },
+    {
+      "from": "q1",
+      "on": "-",
+      "to": "q0"
+    },
+    {
+      "from": "q2",
+      "on": "W",
+      "to": "dead"
+    },
+    {
+      "from": "q2",
+      "on": "-",
+      "to": "q0"
+    },
+    {
+      "from": "dead",
+      "on": "W",
+      "to": "dead"
+    },
+    {
+      "from": "dead",
+      "on": "-",
+      "to": "dead"
+    }
+  ]
+}

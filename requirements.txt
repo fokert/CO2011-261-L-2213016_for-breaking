@@ -1,0 +1,7 @@
+# CO2011 SEM261 IAP — MVP Demo, minimal stack (no bloat)
+pandas>=1.5.0
+python-sat>=1.8
+pulp>=2.7
+matplotlib>=3.5.0
+streamlit>=1.28.0
+openpyxl>=3.0.0
