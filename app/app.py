@@ -51,10 +51,22 @@ def load_data():
 df_clean, params, seed = load_data()
 
 # ============================================================================
+# Create tabs
+# ============================================================================
+
+tab1, tab2, tab3, tab4, tab5 = st.tabs([
+    "📊 Data", 
+    "🔍 M1: Logic", 
+    "📈 M2: ILP", 
+    "🤖 M3: Automata", 
+    "📉 M4: Dynamics"
+])
+
+# ============================================================================
 # Tab 1: Data Overview
 # ============================================================================
 
-with st.tabs(["📊 Data", "🔍 M1: Logic", "📈 M2: ILP", "🤖 M3: Automata", "📉 M4: Dynamics"])[0]:
+with tab1:
     st.header("Data Overview")
     
     col1, col2, col3, col4 = st.columns(4)
@@ -79,7 +91,7 @@ with st.tabs(["📊 Data", "🔍 M1: Logic", "📈 M2: ILP", "🤖 M3: Automata"
 # Tab 2: M1 Logic (SAT)
 # ============================================================================
 
-with st.tabs(["📊 Data", "🔍 M1: Logic", "📈 M2: ILP", "🤖 M3: Automata", "📉 M4: Dynamics"])[1]:
+with tab2:
     st.header("M1: Logic & Satisfiability")
     
     st.subheader("Hard Rules Extracted")
@@ -116,7 +128,7 @@ with st.tabs(["📊 Data", "🔍 M1: Logic", "📈 M2: ILP", "🤖 M3: Automata"
 # Tab 3: M2 ILP (Solver)
 # ============================================================================
 
-with st.tabs(["📊 Data", "🔍 M1: Logic", "📈 M2: ILP", "🤖 M3: Automata", "📉 M4: Dynamics"])[2]:
+with tab3:
     st.header("M2: Linear & Integer Programming")
     
     # Baseline fairness
@@ -169,7 +181,7 @@ with st.tabs(["📊 Data", "🔍 M1: Logic", "📈 M2: ILP", "🤖 M3: Automata"
 # Tab 4: M3 Automata (DFA)
 # ============================================================================
 
-with st.tabs(["📊 Data", "🔍 M1: Logic", "📈 M2: ILP", "🤖 M3: Automata", "📉 M4: Dynamics"])[3]:
+with tab4:
     st.header("M3: Automata & Formal Languages")
     
     st.subheader("Temporal Rules as DFA")
@@ -218,7 +230,7 @@ with st.tabs(["📊 Data", "🔍 M1: Logic", "📈 M2: ILP", "🤖 M3: Automata"
 # Tab 5: M4 Dynamics (Equilibrium)
 # ============================================================================
 
-with st.tabs(["📊 Data", "🔍 M1: Logic", "📈 M2: ILP", "🤖 M3: Automata", "📉 M4: Dynamics"])[4]:
+with tab5:
     st.header("M4: Discrete Dynamical Systems")
     
     st.subheader("Closed-loop Fatigue Recurrence")
